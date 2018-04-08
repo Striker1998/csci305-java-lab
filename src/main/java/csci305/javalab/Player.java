@@ -5,13 +5,8 @@ package csci305.javalab;
  */
 public abstract class Player {
     private String name;
-    static final Element rock = new Rock("Rock");
-    static final Element paper = new Paper("Paper");
-    static final Element scissors = new Scissors("Scissors");
-    static final Element lizard = new Lizard("Lizard");
-    static final Element spock = new Spock("Spock");
 
-
+    public Element last = null;
     public Player(String name) {
         this.name = name;
     }

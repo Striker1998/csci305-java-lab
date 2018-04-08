@@ -38,5 +38,5 @@ run {
     standardInput = System.in
 }
 // Define the main class for the application
-mainClassName = 'csci305.javalab.TestPlayers'
+mainClassName = 'csci305.javalab.Main'
 

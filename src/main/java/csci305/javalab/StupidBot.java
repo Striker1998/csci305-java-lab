@@ -5,7 +5,7 @@ import java.util.Random;
  * Created by kylewebster1 on 3/26/18.
  */
 public class StupidBot extends Player {
-    private Element name;
+    private Element move;
     private int chooser;
 
     public StupidBot(String name) {
@@ -17,21 +17,21 @@ public class StupidBot extends Player {
     @Override
     public Element play() {
         switch (chooser){
-            case 0:
-                name = rock;
-                break;
             case 1:
-                name = paper;
+                move = Main.moves.get("Rock");
                 break;
             case 2:
-                name = scissors;
+                move = Main.moves.get("Paper");
                 break;
             case 3:
-                name = scissors;
+                move = Main.moves.get("Scissors");
+                break;
+            case 4:
+                move = Main.moves.get("Lizard");
                 break;
             default:
-                name = spock;
+                move = Main.moves.get("Spock");
         }
-        return name;
+        return move;
     }
 }

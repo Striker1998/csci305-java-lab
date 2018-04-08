@@ -18,7 +18,7 @@ public class Human extends Player {
         System.out.println("(3) : Scissors");
         System.out.println("(4) : Lizard");
         System.out.println("(5) : Spock");
-        while (name >= 0 && name <= 5 ){
+        while (name == 0){
             try{
                 System.out.print("Enter your move: ");
                 name = reader.nextInt();
@@ -28,23 +28,24 @@ public class Human extends Player {
             }
             if (name == 0 || name > 5){
                 System.out.println("Invalid move. Please try again.");
+                name = 0;
             }
         }
         switch(name){
             case 1:
-                move = rock;
+                move = Main.moves.get("Rock");
                 break;
             case 2:
-                move = paper;
+                move = Main.moves.get("Paper");
                 break;
             case 3:
-                move = scissors;
+                move = Main.moves.get("Scissors");
                 break;
             case 4:
-                move = lizard;
+                move = Main.moves.get("Lizard");
                 break;
             default:
-                move = spock;
+                move = Main.moves.get("Spock");
         }
 
         return move;
