@@ -8,6 +8,6 @@ public class Outcome {
     }
 
     public String compare(String situation, String outcome) {
-        return situation + " --- " + outcome;
+        return situation + " -- " + outcome;
     }
 }
