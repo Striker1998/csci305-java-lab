@@ -3,6 +3,7 @@ package csci305.javalab;
 /**
  * Created by kylewebster1 on 3/26/18.
  */
+//tests that the StupidBot and LastPlayBot works
 public class TestPlayers {
 
     public static void main(String args[]) {

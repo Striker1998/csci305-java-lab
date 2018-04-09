@@ -4,14 +4,16 @@ package csci305.javalab;
  * Created by kylewebster1 on 3/26/18.
  */
 public class Lizard extends Element {
-    public Lizard(String name){
+    public Lizard(String name) {
         super(name);
     }
+
     @Override
     public String compareTo(Element e) {
         String situation;
         String output;
         Outcome o = new Outcome();
+        //compares element to other player 'e'
         if (e.getName().equals("Paper")) {
             situation = "Lizard eats Paper";
             output = "Win";
@@ -24,10 +26,11 @@ public class Lizard extends Element {
         } else if (e.getName().equals("Spock")) {
             situation = "Lizard poisons Spock";
             output = "Win";
-        } else{
+        } else {
             situation = "Lizard equals Lizard";
             output = "Tie";
         }
+        //merges the situation and output
         return o.compare(situation, output);
     }
 }

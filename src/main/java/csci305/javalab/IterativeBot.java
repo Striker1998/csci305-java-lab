@@ -1,20 +1,22 @@
 package csci305.javalab;
 
-import java.util.Random;
-
 /**
  * Created by kylewebster1 on 3/26/18.
  */
-public class IterativeBot extends Player{
+//iterates through each of the different moves.
+public class IterativeBot extends Player {
     Element move = null;
+
     public IterativeBot(String name) {
         super(name);
     }
 
+    //override method play()
     @Override
     public Element play() {
-        if (move != null){
-            switch (move.getName()){
+        //if not first round, iterate to the next move
+        if (move != null) {
+            switch (move.getName()) {
                 case "Rock":
                     move = Main.moves.get("Paper");
                     break;
@@ -22,7 +24,7 @@ public class IterativeBot extends Player{
                     move = Main.moves.get("Scissors");
                     break;
                 case "Scissors":
-                    move = Main.moves.get("Scissors");
+                    move = Main.moves.get("Lizard");
                     break;
                 case "Lizard":
                     move = Main.moves.get("Spock");
@@ -31,25 +33,10 @@ public class IterativeBot extends Player{
                     move = Main.moves.get("Rock");
             }
         }
-        else{
-            Random rand = new Random();
-            int chooser = rand.nextInt(5);
-            switch (chooser){
-                case 1:
-                    move = Main.moves.get("Rock");
-                    break;
-                case 2:
-                    move = Main.moves.get("Paper");
-                    break;
-                case 3:
-                    move = Main.moves.get("Scissors");
-                    break;
-                case 4:
-                    move = Main.moves.get("Lizard");
-                    break;
-                default:
-                    move = Main.moves.get("Spock");
-            }
+        //if first round, then use RandomBot to randomly choose a move.
+        else {
+            Player p1 = new RandomBot(this.getName());
+            move = p1.play();
         }
         return move;
     }

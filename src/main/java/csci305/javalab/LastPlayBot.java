@@ -3,35 +3,21 @@ package csci305.javalab;
 /**
  * Created by kylewebster1 on 3/26/18.
  */
+//Plays the last move the player used.
 public class LastPlayBot extends Player {
     public LastPlayBot(String name) {
         super(name);
     }
 
+    //overridden play method
     @Override
     public Element play() {
-        Element move;
-        if(last == null) {
+        //sets move to the last move
+        Element move = last;
+        //if first move, use RandomBot to perform the next move.
+        if (move == null) {
             Player ran = new RandomBot("RandomBot");
             move = ran.play();
-        }
-        else{
-            switch (last.getName()){
-                case "Rock":
-                    move = Main.moves.get("Paper");
-                    break;
-                case "Paper":
-                    move = Main.moves.get("Scissors");
-                    break;
-                case "Scissors":
-                    move = Main.moves.get("Scissors");
-                    break;
-                case "Lizard":
-                    move = Main.moves.get("Spock");
-                    break;
-                default:
-                    move = Main.moves.get("Rock");
-            }
         }
         return move;
     }
