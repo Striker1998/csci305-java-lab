@@ -1,0 +1,15 @@
+Kyle Webster
+CSCI 305
+Spring 2018
+Lab Questions
+=======================
+1. LastPlayBot is a simple strategy. If it is the first round, then it will use the RandomBot to randomly make a move. Otherwise, it will return last. Last is a Element variable in the Player Class that gets updated after each round with each player's moves. It is specific to each player class.
+2. I employed a strategy to beat most human players. I looked at how people will tend to play the same move again if they won and will play what will beat what they lost to. Using this information, MyBot will randomly choose a move the first round. Using it's last variable and storing it's previous move, it can compare the two and see if it won or lost. If it wins, then it will play the move that their opponent just played. If it lost or tied, then it will play what beat their opponent. In the case of a loss or tie, there are 2 moves that will beat what it's opponent played, so it will randomly choose between the two.  
+3.
+4. I as the human (also knowing which bot I'm up against) am able to consistently beat all but the random bot since it implements a chance of randomness. My bot is about a 50/50 win rate with MyBot, but that's mainly because if I win a round, then it's a 50% chance to guess what it will return. I am noticing that it is really easy to beat a bot that does not use any randomness and is predictable. 
+5. I believe that there is a strategy that will work, but it is only specific to beating certain strategies. For example, to beat the RandomBot, you have to also be random. To beat the LastPlayBot, you have to play what will beat the next in the sequence. There is no supreme strategy, but there are strategies to beat other strategies. 
+6. I like object oriented programming and feel comfortable with the syntax of Java. This is mostly because before this class, it was the only language I knew.
+7.I did not like how constrained I felt when trying to implement the LastPlay and MyBot program as I could not get the data I needed.
+8. I enjoyed this lab, but I felt constrained by some of the instructions and found that they made the lab significantly harder. I found many ways to solve the same problem, but none of them matched how you wanted it to be done. I believe this is good experience for the workplace where your clients want the program done in a specific way.  
+9. 15 (mostly on research for LastPlayBot and MyBot)
+10. My only experience with Java was taking the introduction to java class, and both data structures classes. 
